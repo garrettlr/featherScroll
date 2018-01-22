@@ -5,9 +5,5 @@
   "main": "./src",
   "repository": "https://github.com/garrettlr/featherScroll.git",
   "author": "Garrett Levy <garrettlr@gmail.com>",
-<<<<<<< HEAD
   "license": "MIT"
-=======
-  "license": "MIT",
->>>>>>> fdff7a6dffac346afa461630b9a379b1d8a92f89
 }
