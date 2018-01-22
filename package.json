@@ -1,6 +1,6 @@
 {
   "name": "featherScroll",
-  "version": "0.1",
+  "version": "1.0.1",
   "description": "a window infinite scroll container for react utilizing constant space complexity",
   "main": "./src",
   "repository": "https://github.com/garrettlr/featherScroll.git",
