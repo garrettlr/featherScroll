@@ -146,7 +146,7 @@ export default class FeatherScroll extends Component {
 
 }
 
- InfiniteScroll.defaultProps = {
+ FeatherScroll.defaultProps = {
   handleLoad: () => {},
   isLoading: false,
   inertialDelay: 150,
