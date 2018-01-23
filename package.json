@@ -2,6 +2,7 @@
   "name": "feather-scroll",
   "scripts": {
     "build": "export NODE_ENV=production; ./node_modules/.bin/webpack -w",
+    "compile":"./node_modules/.bin/babel ./src --out-dir ./lib",
     "lint": "NODE_ENV=development eslint --cache --format=node_modules/eslint-formatter-pretty .",
     "lint-fix": "NODE_ENV=development npm run lint -- --fix"
   },
@@ -12,6 +13,7 @@
   "author": "Garrett Levy <garrettlr@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-core": "6.26.0",
     "babel-eslint": "7.2.3",
     "babel-jest": "20.0.3",

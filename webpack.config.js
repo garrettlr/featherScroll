@@ -5,9 +5,12 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 
 module.exports = {
   entry: [
-    'react-hot-loader/patch',
     './src/index.js',
   ],
+  externals: {
+    'react': 'react',
+    'react-dom': 'react-dom'
+  },
 
   plugins: [
     new webpack.DefinePlugin({

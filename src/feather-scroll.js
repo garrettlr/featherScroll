@@ -1,4 +1,3 @@
-// @flow
 import React, { Component } from 'react';
 
 export default class FeatherScroll extends Component {
@@ -120,7 +119,7 @@ export default class FeatherScroll extends Component {
     this.setState({ isLoading: true }, () => this.props.handleLoad());
   }
 
-  handleScrollWrapper() {
+  handleScrollWrapper = () => {
     this.handleScroll(this.getScrollTop());
   }
 
@@ -130,7 +129,7 @@ export default class FeatherScroll extends Component {
     const { range, childCount, elementHeight: height, windowFactor } = this.state;
     const newViewState = this.getViewState(range, childCount, height, windowFactor);
 
-    if (this.shouldLoad(scrollTop) && !this.state.isLoading) {
+    if (this.props.handleLoad && this.shouldLoad(scrollTop) && !this.state.isLoading) {
       this.setState({...newViewState});
       this.handleLoad();
     } else {
@@ -161,7 +160,7 @@ export default class FeatherScroll extends Component {
 
     return (
       <div className={this.props.className}>
-        <div style={wrapperStyles}>
+        <div style={padding}>
           {elements}
           {isLoading? placeholder : null}
         </div>

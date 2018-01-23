@@ -1,1 +1,2 @@
-export { default as FeatherScroll } from './FeatherScroll.js';
+import FeatherScroll from './feather-scroll';
+export default FeatherScroll;
