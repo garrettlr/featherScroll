@@ -1,9 +1,123 @@
 {
-  "name": "featherScroll",
+  "name": "feather-scroll",
+  "scripts": {
+    "build": "export NODE_ENV=production; ./node_modules/.bin/webpack -w",
+    "lint": "NODE_ENV=development eslint --cache --format=node_modules/eslint-formatter-pretty .",
+    "lint-fix": "NODE_ENV=development npm run lint -- --fix"
+  },
   "version": "2.0.0",
   "description": "a window infinite scroll container for react utilizing constant space complexity",
-  "main": "./src",
+  "main": "./lib/feather-scroll.js",
   "repository": "https://github.com/garrettlr/featherScroll.git",
   "author": "Garrett Levy <garrettlr@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "6.26.0",
+    "babel-eslint": "7.2.3",
+    "babel-jest": "20.0.3",
+    "babel-loader": "7.1.2",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-dev-expression": "^0.2.1",
+    "babel-plugin-flow-runtime": "^0.11.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-do-expressions": "^6.22.0",
+    "babel-plugin-transform-es2015-classes": "^6.24.1",
+    "babel-preset-env": "^1.5.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-react-app": "^3.1.0",
+    "babel-preset-react-hmre": "^1.1.1",
+    "babel-preset-react-optimize": "^1.0.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "babel-register": "^6.24.1",
+    "babel-runtime": "6.26.0",
+    "eslint": "4.10.0",
+    "eslint-config-airbnb": "^15.0.1",
+    "eslint-config-react-app": "^2.0.1",
+    "eslint-formatter-pretty": "^1.1.0",
+    "eslint-import-resolver-webpack": "^0.8.3",
+    "eslint-loader": "1.9.0",
+    "eslint-plugin-compat": "^1.0.4",
+    "eslint-plugin-flowtype": "2.39.1",
+    "eslint-plugin-flowtype-errors": "^3.3.1",
+    "eslint-plugin-import": "2.8.0",
+    "eslint-plugin-jest": "^20.0.3",
+    "eslint-plugin-jsx-a11y": "5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-react": "7.4.0",
+    "flow-bin": "^0.59.0",
+    "flow-runtime": "^0.14.0",
+    "flow-typed": "^2.1.5",
+    "html-webpack-plugin": "2.29.0",
+    "node-sass": "^4.5.3",
+    "raf": "3.4.0",
+    "react": "^16.1.1",
+    "react-dev-utils": "^4.2.1",
+    "react-dom": "^16.1.1",
+    "react-hot-loader": "^3.0.0-beta.6",
+    "sass-loader": "^6.0.6",
+    "style-loader": "0.19.0",
+    "stylefmt": "^6.0.0",
+    "stylelint": "^8.1.1",
+    "stylelint-config-standard": "^17.0.0",
+    "sw-precache-webpack-plugin": "0.11.4",
+    "uglifyjs-webpack-plugin": "^0.4.6",
+    "url-loader": "0.6.2",
+    "webpack": "3.8.1",
+    "webpack-bundle-analyzer": "^2.9.1",
+    "webpack-dev-server": "2.9.4",
+    "webpack-manifest-plugin": "1.3.2"
+  },
+  "peerDependencies": {
+    "react": "^0.14.0 || ^15.0.0 || ^16",
+    "react-dom": "^0.14.0 || ^15.0.0 || ^16"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,mjs}"
+    ],
+    "setupFiles": [
+      "<rootDir>/config/polyfills.js"
+    ],
+    "testMatch": [
+      "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
+      "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,mjs}"
+    ],
+    "testEnvironment": "node",
+    "testURL": "http://localhost",
+    "transform": {
+      "^.+\\.(js|jsx|mjs)$": "<rootDir>/node_modules/babel-jest",
+      "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
+      "^(?!.*\\.(js|jsx|mjs|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
+    },
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$"
+    ],
+    "moduleNameMapper": {
+      "^react-native$": "react-native-web"
+    },
+    "moduleFileExtensions": [
+      "web.js",
+      "mjs",
+      "js",
+      "json",
+      "web.jsx",
+      "jsx",
+      "node"
+    ]
+  },
+  "tags": [
+    "react",
+    "scroll",
+    "component"
+  ],
+  "keywords": [
+    "react",
+    "react-component",
+    "scroll",
+    "infinite-scroll"
+  ]
 }
